@@ -1,0 +1,61 @@
+<!DOCTYPE html><html><head>
+<title>/mnt/sda9/filb_iso/hack/psxtools/layout.txt</title>
+<style>
+* {
+	margin:  0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top:  0;
+}
+body { background: url('data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADABAMAAAAZw6BVAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURQAAAP//AAD/AP8A/////38YiIsAAAABdFJOUwBA5thmAAAAAWJLR0QEj2jZUQAAAAd0SU1FB+QGGgIVC1IGWp0AAACySURBVHja7d2xCYAwFEXRry6gbhAnENx/N0F0ghSPyHmN7SE2lzSpLbxa69lcme8EAAAAAACQB+xHdC1/AgAAAAAAAAB6AAAAAAAAAEAPAAAAAAAAAOgBAAAAAAAAAD0AAAAwOmA5AQAAegE9PXC9i/XABxj7FwAAAHQC4kECAPADgPsBAAAAAAAAAD0AAAAAAAAAoAcAAAAAAAAA9AAAAAAAAACAHgAAAAAAAABIPx9wA6pG8O/Bpk48AAAAAElFTkSuQmCC') top left; background-color:#000; }
+img:hover { background-color:#fff; }
+.none {
+	width:  16px;
+	height: 16px;
+	margin-top:  -8px;
+	margin-left: -8px;
+	background: url('data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJUExURQAAAP8AAP///2cZZB4AAAABdFJOUwBA5thmAAAAAWJLR0QCZgt8ZAAAAAd0SU1FB+QGGgEMCSVOLPAAAAA4SURBVAjXYwhgYGBlCGFgEAVCIM3qwBjAwBjA6gDkAAUYRIFSDKwBMALMBUmAlYAVg7WBDQAZBQAWAQb1CwbkAwAAAABJRU5ErkJggg==') no-repeat center center;
+}
+</style>
+</head><body>
+<div class='r_0000 r' style='left:256px;top:192px;'>
+  <div class='l_0002 l' style='left:0px;top:0px;'>
+    <img src='ma_1200/l_0002.png' title='ma_1200/l_0002.png'>
+  </div>
+  <div class='l_0001 l' style='left:0px;top:0px;'>
+    <img src='ma_1200/l_0001.png' title='ma_1200/l_0001.png'>
+  </div>
+  <div class='l_0000 l' style='left:0px;top:0px;'>
+    <img src='ma_1200/l_0000.png' title='ma_1200/l_0000.png'>
+  </div>
+  <div class='en8/273_0_1 en8/273' style='left:0px;top:0px;'>
+    <div class='sprite none' title='en8/273_0_1'></div>
+  </div>
+  <div class='en2/170_22_0 en2/170' style='left:0px;top:0px;'>
+    <div class='sprite none' title='en2/170_22_0'></div>
+  </div>
+  <div class='en8/273_0_0 en8/273' style='left:0px;top:0px;'>
+    <div class='sprite none' title='en8/273_0_0'></div>
+  </div>
+  <div class='en2/171_23_0 en2/171' style='left:0px;top:0px;'>
+    <div class='sprite none' title='en2/171_23_0'></div>
+  </div>
+  <div class='en9/0_0_0 en9/0' style='left:0px;top:0px;'>
+    <div class='sprite none' title='en9/0_0_0'></div>
+  </div>
+</div>
+<script>
+window.onload = function() {
+	var tags = document.querySelectorAll("img.sprite");
+	for ( var i=0; i < tags.length; i++ )
+	{
+		var x1 = 0 - ( tags[i].width  / 2 );
+		var y1 = 0 - ( tags[i].height / 2 );
+		tags[i].style.left = x1 + "px";
+		tags[i].style.top  = y1 + "px";
+	}
+	return;
+};
+</script>
+</body></html>

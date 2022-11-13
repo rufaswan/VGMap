@@ -1,0 +1,13 @@
+# Deny  All , Allow Known (Whitelist)
+# Allow All , Deny  Known (Blacklist)
+
+# This is a whitelist
+*        binary -text -diff
+.gitattributes   text
+.gitignore       text
+
+*.html   text diff=html
+*.txt    text
+
+*.sh     text eol=lf
+*.md     text

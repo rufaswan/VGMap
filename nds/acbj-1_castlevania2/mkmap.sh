@@ -1,0 +1,14 @@
+php.sh /tmp/layout_txt_html.php -cvnds ma_00* > 0.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_01* > 1.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_02* > 2.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_03* > 3.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_04* > 4.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_05* > 5.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_06* > 6.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_07* > 7.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_08* > 8.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_09* > 9.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_10* > 10.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_11* > 11.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_12* > 12.html
+php.sh /tmp/layout_txt_html.php -cvnds ma_13* > 13.html

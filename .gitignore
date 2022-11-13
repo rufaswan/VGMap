@@ -1,0 +1,16 @@
+# Deny  All , Allow Known (Whitelist)
+# Allow All , Deny  Known (Blacklist)
+
+# This is a whitelist
+
+*
+!.gitattributes
+!.gitignore
+!*/
+
+!*.html
+!*.txt
+!*.png
+
+!*.sh
+!*.md
