@@ -1,23 +1,33 @@
-<!DOCTYPE html><html><head>
-<title>/mnt/sda9/filb_iso/hack/psxtools/layout.txt</title>
+<!DOCTYPE html>
+<html><head>
+
+<title>0</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
 <style>
 * {
-	margin:  0;
-	padding: 0;
-	position: absolute;
-	left: 0;
-	top:  0;
+	margin   : 0;
+	padding  : 0;
+	position : absolute;
+	left     : 0;
+	top      : 0;
 }
-body { background: url('data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADABAMAAAAZw6BVAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURQAAAP//AAD/AP8A/////38YiIsAAAABdFJOUwBA5thmAAAAAWJLR0QEj2jZUQAAAAd0SU1FB+QGGgIVC1IGWp0AAACySURBVHja7d2xCYAwFEXRry6gbhAnENx/N0F0ghSPyHmN7SE2lzSpLbxa69lcme8EAAAAAACQB+xHdC1/AgAAAAAAAAB6AAAAAAAAAEAPAAAAAAAAAOgBAAAAAAAAAD0AAAAwOmA5AQAAegE9PXC9i/XABxj7FwAAAHQC4kECAPADgPsBAAAAAAAAAD0AAAAAAAAAoAcAAAAAAAAA9AAAAAAAAACAHgAAAAAAAABIPx9wA6pG8O/Bpk48AAAAAElFTkSuQmCC') top left; background-color:#000; }
-img:hover { background-color:#fff; }
+body {
+	background : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADACAMAAADcM01UAAAAMFBMVEUAAAAAAIAAgAAAgICAAACAAICAgADAwMCAgIAAAP8A/wAA////AAD/AP///wD///+qJSS7AAABHklEQVR42u3aIQ7AMAwEQSuS/f8nF7dhCeuNWeioR1atCb+aet2qrDcAAAAAAAAAAAAAAAAApAKs6PMFAAAAAAAAAAAAAAAAAAAAPUAPMAEAAAAAAAAAAAAAAAAAAKAH6AEmAAAAAAAAAAAAAAAAAAAA9AA9wAQAAAAAAAAAAAAAAAAAAIAeoAeYAAAAAAAAAADg+N0NAAAAAAAA5PWA/l5aD9gATAAAAAAAAAAAoAgBAAAAAID/9wD/B5gAAAAAAAAAAAAAAAAAAADQA/QAEwAAAAAAAAAAAAAAAAAAAHqAHmACAAAAAAAAAAAAAAAAAABAD9ADTAAAAAAAAAAAAAAAAAAAAOgBeoAJAAAAAAAAAAAAAAAAAACAC4DwewD3Y0C1dQELSgAAAABJRU5ErkJggg==') top left;
+	background-color : #000;
+}
+img:hover {
+	background-color : #fff;
+}
 .none {
-	width:  16px;
-	height: 16px;
-	margin-top:  -8px;
-	margin-left: -8px;
-	background: url('data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJUExURQAAAP8AAP///2cZZB4AAAABdFJOUwBA5thmAAAAAWJLR0QCZgt8ZAAAAAd0SU1FB+QGGgEMCSVOLPAAAAA4SURBVAjXYwhgYGBlCGFgEAVCIM3qwBjAwBjA6gDkAAUYRIFSDKwBMALMBUmAlYAVg7WBDQAZBQAWAQb1CwbkAwAAAABJRU5ErkJggg==') no-repeat center center;
+	width       : 16px;
+	height      : 16px;
+	margin-top  : -8px;
+	margin-left : -8px;
+	background  : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJUExURQAAAP8AAP///2cZZB4AAAABdFJOUwBA5thmAAAAAWJLR0QCZgt8ZAAAAAd0SU1FB+QGGgEMCSVOLPAAAAA4SURBVAjXYwhgYGBlCGFgEAVCIM3qwBjAwBjA6gDkAAUYRIFSDKwBMALMBUmAlYAVg7WBDQAZBQAWAQb1CwbkAwAAAABJRU5ErkJggg==') no-repeat center center;
 }
 </style>
+
 </head><body>
 <div class='r_0000 r' style='left:2304px;top:4608px;'>
   <div class='l_0002 l' style='left:0px;top:0px;'>
@@ -5236,17 +5246,18 @@ img:hover { background-color:#fff; }
     <div class='sprite none' title='en2/54_7_0'></div>
   </div>
 </div>
-<script>
-window.onload = function() {
-	var tags = document.querySelectorAll("img.sprite");
-	for ( var i=0; i < tags.length; i++ )
-	{
-		var x1 = 0 - ( tags[i].width  / 2 );
-		var y1 = 0 - ( tags[i].height / 2 );
-		tags[i].style.left = x1 + "px";
-		tags[i].style.top  = y1 + "px";
-	}
-	return;
-};
-</script>
-</body></html>
+	<script>
+	window.onload = function(){
+		var tags = document.querySelectorAll("img.sprite");
+		for ( var i=0; i < tags.length; i++ )
+		{
+			var x1 = ( tags[i].width  / 2 ) | 0;
+			var y1 = ( tags[i].height / 2 ) | 0;
+			tags[i].style.left = -x1 + "px";
+			tags[i].style.top  = -y1 + "px";
+		}
+		return;
+	};
+	</script>
+</body>
+</html>
