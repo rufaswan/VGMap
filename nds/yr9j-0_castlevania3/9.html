@@ -19,6 +19,9 @@ body {
 img:hover {
 	background-color : #fff;
 }
+img.sprite:hover {
+	z-index : 99;
+}
 .none {
 	width       : 16px;
 	height      : 16px;
@@ -149,7 +152,7 @@ img:hover {
     <div class='sprite none' title='en2/75_1_3'></div>
   </div>
   <div class='en1/109_0_0 en1/109' style='left:0px;top:0px;'>
-    <div class='sprite none' title='en1/109_0_0'></div>
+    <img class='sprite' src='pcen/en1/109_0_0.png' title='pcen/en1/109_0_0.png'>
   </div>
   <div class='en2/17_3_0 en2/17' style='left:224px;top:2624px;'>
     <div class='sprite none' title='en2/17_3_0'></div>
@@ -197,12 +200,11 @@ img:hover {
 		var tags = document.querySelectorAll("img.sprite");
 		for ( var i=0; i < tags.length; i++ )
 		{
-			var x1 = ( tags[i].width  / 2 ) | 0;
-			var y1 = ( tags[i].height / 2 ) | 0;
+			var x1 = tags[i].width  >> 1;
+			var y1 = tags[i].height >> 1;
 			tags[i].style.left = -x1 + "px";
 			tags[i].style.top  = -y1 + "px";
 		}
-		return;
 	};
 	</script>
 </body>

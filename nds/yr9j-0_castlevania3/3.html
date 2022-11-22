@@ -19,6 +19,9 @@ body {
 img:hover {
 	background-color : #fff;
 }
+img.sprite:hover {
+	z-index : 99;
+}
 .none {
 	width       : 16px;
 	height      : 16px;
@@ -222,19 +225,19 @@ img:hover {
     <div class='sprite none' title='en2/35_0_0'></div>
   </div>
   <div class='en1/81_0_0 en1/81' style='left:640px;top:303px;'>
-    <div class='sprite none' title='en1/81_0_0'></div>
+    <img class='sprite' src='pcen/en1/81_0_0.png' title='pcen/en1/81_0_0.png'>
   </div>
   <div class='en1/37_3_0 en1/37' style='left:384px;top:176px;'>
-    <div class='sprite none' title='en1/37_3_0'></div>
+    <img class='sprite' src='pcen/en1/37_3_0.png' title='pcen/en1/37_3_0.png'>
   </div>
   <div class='en1/105_0_0 en1/105' style='left:256px;top:363px;'>
-    <div class='sprite none' title='en1/105_0_0'></div>
+    <img class='sprite' src='pcen/en1/105_0_0.png' title='pcen/en1/105_0_0.png'>
   </div>
   <div class='en1/105_0_0 en1/105' style='left:384px;top:363px;'>
-    <div class='sprite none' title='en1/105_0_0'></div>
+    <img class='sprite' src='pcen/en1/105_0_0.png' title='pcen/en1/105_0_0.png'>
   </div>
   <div class='en1/52_0_0 en1/52' style='left:512px;top:363px;'>
-    <div class='sprite none' title='en1/52_0_0'></div>
+    <img class='sprite' src='pcen/en1/52_0_0.png' title='pcen/en1/52_0_0.png'>
   </div>
   <div class='en2/41_1_3584 en2/41' style='left:56px;top:344px;'>
     <div class='sprite none' title='en2/41_1_3584'></div>
@@ -449,10 +452,10 @@ img:hover {
     <div class='sprite none' title='en2/82_16_48'></div>
   </div>
   <div class='en1/52_0_0 en1/52' style='left:128px;top:367px;'>
-    <div class='sprite none' title='en1/52_0_0'></div>
+    <img class='sprite' src='pcen/en1/52_0_0.png' title='pcen/en1/52_0_0.png'>
   </div>
   <div class='en1/52_0_0 en1/52' style='left:384px;top:367px;'>
-    <div class='sprite none' title='en1/52_0_0'></div>
+    <img class='sprite' src='pcen/en1/52_0_0.png' title='pcen/en1/52_0_0.png'>
   </div>
 </div>
 <div class='r_0009 r' style='left:1024px;top:384px;'>
@@ -551,12 +554,11 @@ img:hover {
 		var tags = document.querySelectorAll("img.sprite");
 		for ( var i=0; i < tags.length; i++ )
 		{
-			var x1 = ( tags[i].width  / 2 ) | 0;
-			var y1 = ( tags[i].height / 2 ) | 0;
+			var x1 = tags[i].width  >> 1;
+			var y1 = tags[i].height >> 1;
 			tags[i].style.left = -x1 + "px";
 			tags[i].style.top  = -y1 + "px";
 		}
-		return;
 	};
 	</script>
 </body>

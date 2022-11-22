@@ -19,6 +19,9 @@ body {
 img:hover {
 	background-color : #fff;
 }
+img.sprite:hover {
+	z-index : 99;
+}
 .none {
 	width       : 16px;
 	height      : 16px;
@@ -67,7 +70,7 @@ img:hover {
     <div class='sprite none' title='en8/15_0_1'></div>
   </div>
   <div class='en1/147_1_1 en1/147' style='left:256px;top:176px;'>
-    <div class='sprite none' title='en1/147_1_1'></div>
+    <img class='sprite' src='pcen/en1/147_1_1.png' title='pcen/en1/147_1_1.png'>
   </div>
   <div class='en8/513_4_0 en8/513' style='left:0px;top:0px;'>
     <div class='sprite none' title='en8/513_4_0'></div>
@@ -82,13 +85,13 @@ img:hover {
     <div class='sprite none' title='en8/258_4_0'></div>
   </div>
   <div class='en1/147_1_1 en1/147' style='left:256px;top:176px;'>
-    <div class='sprite none' title='en1/147_1_1'></div>
+    <img class='sprite' src='pcen/en1/147_1_1.png' title='pcen/en1/147_1_1.png'>
   </div>
   <div class='en8/259_4_0 en8/259' style='left:0px;top:0px;'>
     <div class='sprite none' title='en8/259_4_0'></div>
   </div>
   <div class='en1/147_1_1 en1/147' style='left:256px;top:176px;'>
-    <div class='sprite none' title='en1/147_1_1'></div>
+    <img class='sprite' src='pcen/en1/147_1_1.png' title='pcen/en1/147_1_1.png'>
   </div>
 </div>
 	<script>
@@ -96,12 +99,11 @@ img:hover {
 		var tags = document.querySelectorAll("img.sprite");
 		for ( var i=0; i < tags.length; i++ )
 		{
-			var x1 = ( tags[i].width  / 2 ) | 0;
-			var y1 = ( tags[i].height / 2 ) | 0;
+			var x1 = tags[i].width  >> 1;
+			var y1 = tags[i].height >> 1;
 			tags[i].style.left = -x1 + "px";
 			tags[i].style.top  = -y1 + "px";
 		}
-		return;
 	};
 	</script>
 </body>
