@@ -1,4 +1,4 @@
 # VGMap
 Interactive Video Game Maps
 
-* link:nds/README.adoc[NDS list]
+* link:nds/index.adoc[NDS list]
