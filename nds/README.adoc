@@ -8,6 +8,7 @@
 .. link:acvj-1_castlevania1/14.html[Time Attack]
 .. link:acvj-1_castlevania1/15.html[Time Attack]
 .. link:acvj-1_castlevania1/16.html[room]
+
 . Castlevania Portrait of Ruins
 .. link:acbj-1_castlevania2/0.html[Dracula Castle]
 .. link:acbj-1_castlevania2/1.html[City of Haze]
@@ -23,6 +24,7 @@
 .. link:acbj-1_castlevania2/11.html[Brauner's Room]
 .. link:acbj-1_castlevania2/12.html[Epilogue]
 .. link:acbj-1_castlevania2/13.html[Time Attack]
+
 . Castlevania Order of Ecclesia
 .. link:yr9j-0_castlevania3/0.html[Dracula Castle]
 .. link:yr9j-0_castlevania3/1.html[Wygol Village]
