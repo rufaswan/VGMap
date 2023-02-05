@@ -2,7 +2,7 @@
 # Allow All , Deny  Known (Blacklist)
 
 # This is a whitelist
-*        binary -text -diff
+* binary -text -diff
 .gitattributes   text
 .gitignore       text
 
@@ -11,3 +11,4 @@
 
 *.sh     text eol=lf
 *.md     text
+*.adoc   text
