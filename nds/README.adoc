@@ -1,6 +1,7 @@
+:ghpage: http://rufaswan.github.io/VGMap/nds
+
 # NDS
 :toc:
-:ghpage: http://rufaswan.github.io/VGMap/nds
 
 ## Castlevania Dawn of Sorrow
 . link:{ghpage}/acvj-1_castlevania1/0.html[Dracula Castle]

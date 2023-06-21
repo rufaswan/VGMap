@@ -2,13 +2,13 @@
 # Allow All , Deny  Known (Blacklist)
 
 # This is a whitelist
-* binary -text -diff
-.gitattributes   text
-.gitignore       text
+*  -text  -diff
+.gitattributes  diff
+.gitignore      diff
 
-*.html   text diff=html
-*.txt    text
+*.html   diff=html
+*.txt    diff
 
-*.sh     text eol=lf
-*.md     text
-*.adoc   text
+*.sh     diff=bash  eol=lf
+*.md     diff=markdown
+*.adoc   diff
