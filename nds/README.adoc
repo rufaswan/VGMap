@@ -1,9 +1,9 @@
 :ghpage: http://rufaswan.github.io/VGMap/nds
 
-# NDS
+= NDS
 :toc:
 
-## Castlevania Dawn of Sorrow
+== Castlevania Dawn of Sorrow
 . link:{ghpage}/acvj-1_castlevania1/0.html[Dracula Castle]
 . link:{ghpage}/acvj-1_castlevania1/10.html[Abyss]
 . link:{ghpage}/acvj-1_castlevania1/12.html[Prologue]
@@ -12,7 +12,7 @@
 . link:{ghpage}/acvj-1_castlevania1/15.html[Time Attack]
 . link:{ghpage}/acvj-1_castlevania1/16.html[room]
 
-## Castlevania Portrait of Ruins
+== Castlevania Portrait of Ruins
 . link:{ghpage}/acbj-1_castlevania2/0.html[Dracula Castle]
 . link:{ghpage}/acbj-1_castlevania2/1.html[City of Haze]
 . link:{ghpage}/acbj-1_castlevania2/2.html[13th Street]
@@ -28,7 +28,7 @@
 . link:{ghpage}/acbj-1_castlevania2/12.html[Epilogue]
 . link:{ghpage}/acbj-1_castlevania2/13.html[Time Attack]
 
-## Castlevania Order of Ecclesia
+== Castlevania Order of Ecclesia
 . link:{ghpage}/yr9j-0_castlevania3/0.html[Dracula Castle]
 . link:{ghpage}/yr9j-0_castlevania3/1.html[Wygol Village]
 . link:{ghpage}/yr9j-0_castlevania3/2.html[Ecclesia]
