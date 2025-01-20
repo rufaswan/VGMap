@@ -1,0 +1,3 @@
+== PSU save data
+
+Collection of final save data with all areas unlocked, used for checking and debugging maps.
