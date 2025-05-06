@@ -8,11 +8,10 @@
 !.gitignore
 !*/
 
+!*.md
+!*.adoc
+!*.sh
 !*.html
 !*.txt
 !*.png
 !*.zip
-
-!*.sh
-!*.md
-!*.adoc

@@ -6,9 +6,8 @@
 .gitattributes  diff
 .gitignore      diff
 
-*.html   diff=html
-*.txt    diff
-
-*.sh     diff=bash  eol=lf
 *.md     diff=markdown
 *.adoc   diff
+*.sh     diff=bash  eol=lf
+*.html   diff=html
+*.txt    diff
