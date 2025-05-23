@@ -49,9 +49,13 @@ case "$cmd" in
 		;;
 
 	'pull')
-		echo "[$git] git $cmd = $opt"
-		git pull origin pull/$opt/head
-		git push origin master
+		if [[ "$opt" == 'master' ]]; then
+			git pull origin master
+		else
+			echo "[$git] git $cmd = $opt"
+			git pull origin pull/$opt/head
+			git push origin master
+		fi
 		;;
 	'tag')
 		echo "[$git] git $cmd = $opt"
