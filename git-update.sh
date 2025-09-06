@@ -13,6 +13,12 @@ ups=$(load_repo  upstream  repo.fork)
 [ "$git" ] || exit
 echo "git=$git  ups=$ups"
 
+#git diff HEAD
+#git ls-files --modified
+mod=$(git status --short)
+echo "$mod"
+
+# parse args
 cmd="$1"
 shift
 opt="$@"
@@ -21,11 +27,6 @@ opt="$@"
 [ "$opt" ] || exit
 echo "cmd=$cmd  opt=$opt"
 echo "=========="
-
-#git diff HEAD
-#git ls-files --modified
-mod=$(git status --short)
-echo $mod
 
 case "$cmd" in
 	'push')
