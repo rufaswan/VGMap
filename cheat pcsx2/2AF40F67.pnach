@@ -1,0 +1,13 @@
+gametitle=RockMan X - Command Mission
+   gameid=SLPM-65643
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// is deploy return = ( time > (time + wait) )
+// ( time > wait ) == always true
+//   17ed5c  lw  v1, 0(556D68) // time
+//   17ed60  sw  v1, 0(s1)
+patch=1,EE,2017ed60,extended,0

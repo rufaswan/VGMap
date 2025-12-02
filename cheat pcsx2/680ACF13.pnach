@@ -1,0 +1,32 @@
+gametitle=Rockman X8
+   gameid=SLPM-65730
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// 16a284  lw    v0, 2c(s2)
+// 16a288  lw    v1, 1c(v1)
+// 16a28c  subu  v0, v1
+// 16a290  sw    v0, 2c(s2)
+//   also affects enemy
+//   if damage > hp , enemy dies
+// subu v0,v0 = 0x421023
+// BUG
+//   metal valley  = cant defeat big robot
+//   troia base    = cant break  big mech into smaller mech
+//   central white = spare energy wont activate , so you die in 1 hit
+patch=1,EE,2016a28c,extended,421023
+
+// metal
+patch=1,EE,00653976,extended,f
+
+// life + weapon tank
+patch=1,EE,00653cf0,extended,24
+patch=1,EE,00653cfc,extended,24
+patch=1,EE,00653d08,extended,90
+
+// spike barrier + spare energy
+patch=1,EE,00653ade,extended,1
+patch=1,EE,00653adf,extended,1

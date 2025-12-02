@@ -1,0 +1,17 @@
+gametitle=Monster Hunter G
+   gameid=SLPM-65869
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// Item - during Quest - no adjust
+//   4cbdd0  lh    v0, 82a(v1)
+//   s2 = v1 + 82a
+//   4cbdd8  addu  v0, s3
+//   4cbddc  sh    v0, 82a(v1)
+//   4cbde0  lh    v1, 82a(v1)
+//   if v1 > 0  goto  4cbe10
+//   4cbe08  sh     0,  0(s2)
+patch=1,EE,204cbdd8,extended,0

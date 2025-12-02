@@ -15,3 +15,6 @@
 !*.txt
 !*.png
 !*.zip
+
+!*.pnach
+!*.ini

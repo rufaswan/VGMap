@@ -1,0 +1,20 @@
+gametitle=Rockman X7
+   gameid=SLPM-65331
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// 2f96e0  li a1, 2
+// 2f96f8  sb a1, 0(v0)
+//   00 = not found
+//   01 = rescued
+//   02 = died
+// li a1, 0 = 0x24050000
+patch=1,EE,202f96e0,extended,24050000
+
+// RAM e4eb4c = life p1
+// RAM e4ebcc = life p2
+patch=1,EE,00e4eb4c,extended,50
+patch=1,EE,00e4ebcc,extended,50

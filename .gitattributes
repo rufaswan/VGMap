@@ -11,3 +11,6 @@
 *.sh     diff=bash  eol=lf
 *.html   diff=html
 *.txt    diff
+
+*.pnach  diff
+*.ini    diff
