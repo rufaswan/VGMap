@@ -1,0 +1,22 @@
+gametitle=Makai Senki Disgaea
+   gameid=SLPS-20251
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// resurrection = max exp
+// 1d3028  ld  v0, 0(456d10)
+// 1d302c  sd  v0, 0(s0)
+patch=1,EE,00456d17,extended,77
+
+// resurrection = max mana
+// 1d32c0  lw  v0, 0(4573a8)
+// 1d32c4  sw  v0, 698(s0)
+patch=1,EE,004573ab,extended,77
+
+// resurrection = keep rank
+// 1d35a0  lbu  v0, 0(457411) // =0
+// 1d35a4  sb   v0, 701(s0)
+patch=1,EE,201d35a4,extended,0

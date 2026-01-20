@@ -1,0 +1,29 @@
+gametitle=Makai Senki Disgaea 2
+   gameid=SLPS-25608
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// on resurrection
+//   a1 = 3d1690
+//   //v0 = 3419c0 + (a0 << 4 + a0 << 7)
+//   v0 = 3419c0 + (a0 * 880)
+//   s0 = v0 + bc8
+//   a0 = s0
+//   1cb4c0  jal 16ef00
+//     EXP = RAM 342588
+//       v0 = sp[10] // a1
+//       16ef10  ld  v1, 0(v0)
+//       v0 = sp[0]  // a0
+//       16ef18  sd  v1, 0(v0)
+//     Mana = RAM 342d44
+//       v0 = sp[10] // a1
+//       16f200  lw  v1, 7bc(v0)
+//       v0 = sp[0]  // a0
+//       16f208  sw  v1, 7bc(v0)
+// EXP  = 3d1690 +   0 = 3d1690
+// Mana = 3d1690 + 7bc = 3d1e4c
+patch=1,EE,003d1697,extended,77
+patch=1,EE,003d1e4f,extended,77
