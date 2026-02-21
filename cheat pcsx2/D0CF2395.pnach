@@ -1,0 +1,16 @@
+gametitle=BioHazard - Code Veronica - Perfect Version
+   gameid=SLPM-65022
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// 289f20  addiu  v0, a2, -1
+// 289f2c  addiu  v0, a2, -1
+// 289f3c  addiu  v0, a2, -1
+// 289f58  addiu  v0, a2, -1
+patch=1,EE,20289f20,extended,0
+patch=1,EE,20289f2c,extended,0
+patch=1,EE,20289f3c,extended,0
+patch=1,EE,20289f58,extended,0
