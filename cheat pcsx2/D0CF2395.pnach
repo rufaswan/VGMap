@@ -6,6 +6,7 @@ gametitle=BioHazard - Code Veronica - Perfect Version
 //   EE    = EE memory
 //   type  = 0=int8  1=int16  2=int32
 
+// ammo never reduce
 // 289f20  addiu  v0, a2, -1
 // 289f2c  addiu  v0, a2, -1
 // 289f3c  addiu  v0, a2, -1

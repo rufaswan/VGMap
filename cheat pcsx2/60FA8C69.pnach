@@ -1,0 +1,40 @@
+gametitle=BioHazard 4
+   gameid=SLPM-66213
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// leon cannot die
+// 1c3018  sh  v0, 7ed6(a0)
+// 1c3038  sh  v0, 7ed6(v1)
+// 1c3048  sh   0, 7ed6(v1)
+patch=1,EE,201c3018,extended,0
+patch=1,EE,201c3038,extended,0
+patch=1,EE,201c3048,extended,0
+
+// 7777 peseta
+// 11e840  a0=   a
+// 11e848  a0= 12c
+// 11e858  a0=  64
+// 11e860  a0= bb8
+// 11e870  a0= 3e8
+// 11e888  a0=1388
+patch=1,EE,1011e840,extended,7777
+patch=1,EE,1011e848,extended,7777
+patch=1,EE,1011e858,extended,7777
+patch=1,EE,1011e860,extended,7777
+patch=1,EE,1011e870,extended,7777
+patch=1,EE,1011e888,extended,7777
+
+// inf ammo
+// 120224  lhu    v1, 8(s0)
+// 120244  andi   v0, v1, ffff
+// 120248  srl    v0, 3
+// 12024c  addiu  v0, -1
+// 120250  sll    v0, 3
+// 120254  andi   v1, 7
+// 120258  or     v1, v0
+// 12025c  sh     v1, 8(s0)
+patch=1,EE,2012024c,extended,0
