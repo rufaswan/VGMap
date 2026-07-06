@@ -1,0 +1,27 @@
+gametitle=Genso Suikoden III
+   gameid=SLPM-65073
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// battle 7777 exp
+// 16c8968  li  a1, 1869f
+// 16c8998  sw  s0, 0(a0) = ac900000 // if s1 == 2/set
+// 16c89b0  sw  v0, 0(a0) = ac820000 // if s1 == 0/add , v0 += s0
+// 16c89b8  sw  a1, 0(a0) = ac850000 // if s1 == 0/add , if (v0 += s0) > a1
+// 16c89d0  sw   0, 0(a0) = ac800000 // if s1 == 1/sub , if (v0 < s0)
+// 16c89d4  sw  v0, 0(a0) = ac820000 // if s1 == 1/sub , v0 -= s0
+patch=1,EE,116c89b2,extended,ac85
+//patch=1,EE,116c89d6,extended,ac85 // BUG = level up inf loop
+
+// battle 7777 skill
+// 16c8a30  li  a1, 1869f
+// 16c8a60  sw  s0, 4(a0) = ac900004 // if s1 == 2/set
+// 16c8a78  sw  v0, 4(a0) = ac820004 // if s1 == 0/add , v0 += s0
+// 16c8a80  sw  a1, 4(a0) = ac850004 // if s1 == 0/add , if (v0 += s0) > a1
+// 16c8a98  sw   0, 4(a0) = ac800004 // if s1 == 1/sub , if (v0 < s0)
+// 16c8a9c  sw  v0, 4(a0) = ac820004 // if s1 == 1/sub , v0 -= s0
+patch=1,EE,116c8a7a,extended,ac85
+patch=1,EE,116c8a9e,extended,ac85

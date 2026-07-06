@@ -1,0 +1,15 @@
+gametitle=Popolocrois - The Law of the Moon
+   gameid=SCPS-15063
+
+// patch=w,EE,taaaaaaa,extended,v
+//   write = 0=once 1=always
+//   EE    = EE memory
+//   type  = 0=int8  1=int16  2=int32
+
+// no map encounter
+// NOT STRIP = this game has function names
+// 1fcfb0  DecodeFuncENCOUNTCHECK
+//   1fd0d8  jal  ppMapEncountGetData
+//   1fd0e0  daddu  s0,v0,zero   = --40802d
+//       ->  xor    s0,s0,s0     = 02108026
+patch=1,EE,201fd0e0,extended,02108026
